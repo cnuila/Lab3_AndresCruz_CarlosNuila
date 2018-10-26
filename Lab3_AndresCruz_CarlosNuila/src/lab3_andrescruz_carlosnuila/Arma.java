@@ -14,6 +14,7 @@ public class Arma {
     protected double alcance;
     protected double precio;
     protected String imprimir="";
+    
     public Arma(String nombre, double alcance, double precio) {
         this.nombre = nombre;
         this.alcance = alcance;

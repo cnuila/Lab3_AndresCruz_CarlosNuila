@@ -125,7 +125,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                 if (posicionEjercito < listaEjercito.size()) {
                     int opcionSoldado = 0;
                     while (opcionSoldado != 5) {
-                        System.out.print("1)Crear Soldado\n"
+                        System.out.println("1)Crear Soldado\n"
                                 + "2)Modificar Soldado\n"
                                 + "3)Eliminar Soldado\n"
                                 + "4)Listar Soldado\n"
@@ -157,8 +157,8 @@ public class Lab3_AndresCruz_CarlosNuila {
                                         contEjecutor++;
                                     }
                                 }
-                                System.out.print("1)General"
-                                        + "2)Caballero"
+                                System.out.println("1)General\n"
+                                        + "2)Caballero\n"
                                         + "3)Ejecutor");
                                 System.out.print("Ingrese el tipo de soldado");
                                 int tipoSoldado = sc.nextInt();
@@ -256,8 +256,40 @@ public class Lab3_AndresCruz_CarlosNuila {
                     System.out.println("No existe el ejercito");
                 }
             }
-            if (opcionMenu == 3){
-                System.out.println("");
+            if (opcionMenu == 3) {
+                int opcionArmas = 0;
+                while (opcionArmas != 6) {
+                    System.out.print("1)Crear Arma\n"
+                            + "2)Modificar Arma\n"
+                            + "3)Eliminar Arma\n"
+                            + "4)Listar Arma\n"
+                            + "5)Inventario de Armas\n"
+                            + "6)Atras");
+                    opcionArmas = sc.nextInt();
+
+                    if (opcionArmas == 1) {
+                        System.out.print("Ingrese el nombre del arma: ");
+                        String nombre = sc.next();
+                        System.out.print("Ingrese el alcance: ");
+                        double alcance = sc.nextDouble();
+                        System.out.print("Ingrese el precio del arma: ");
+                        double precio = sc.nextDouble();
+                        System.out.println("1)Bomba\n"
+                                + "2)Rifle\n"
+                                + "3)Arma Blanca");
+                        int tipoArma = sc.nextInt();
+                        while (tipoArma > 4) {
+                            System.out.println("1)Bomba\n"
+                                    + "2)Rifle\n"
+                                    + "3)Arma Blanca");
+                            tipoArma = sc.nextInt();
+                        }
+                        if (tipoArma == 1) {
+                            System.out.print("Ingrese el material de la bomba: ");
+                            
+                        }
+                    }
+                }
             }
         }
     }
