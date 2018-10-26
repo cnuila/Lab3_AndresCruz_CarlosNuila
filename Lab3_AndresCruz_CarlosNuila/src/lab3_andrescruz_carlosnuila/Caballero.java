@@ -15,6 +15,8 @@ public class Caballero extends Soldado{
 
     public Caballero(String nombre, String lugar, int edad, int salud) {
         super(nombre, lugar, edad, salud);
+        super.rango="Caballero";
+        super.imprimir+="\nNombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= Caballero" + "\nArmas en posesion=\n"+arma;;
     }
     
     @Override
@@ -62,8 +64,5 @@ public class Caballero extends Soldado{
         return arma;
     }
 
-    @Override
-    public String toString() {
-        return "Nombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= Caballero" + "\nArmas en posesion=\n"+arma;
-    }
+    
 }

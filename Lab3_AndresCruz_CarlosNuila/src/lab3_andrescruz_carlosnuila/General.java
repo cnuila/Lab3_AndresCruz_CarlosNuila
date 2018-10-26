@@ -17,6 +17,8 @@ public class General extends Soldado {
 
     public General(int añoAlmando, String nombre, String lugar, int edad, int salud) {
         super(nombre, lugar, edad, salud);
+        super.rango="General";
+        super.imprimir+="\nNombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= General" + " Años al Mando=" + añoAlmando + "\nArmas en posesion=\n"+arma;
         this.añoAlmando = añoAlmando;
     }
 
@@ -71,8 +73,5 @@ public class General extends Soldado {
         this.añoAlmando = añoAlmando;
     }
 
-    @Override
-    public String toString() {
-        return "Nombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= General" + " Años al Mando=" + añoAlmando + "\nArmas en posesion=\n"+arma;
-    }    
+        
 }
