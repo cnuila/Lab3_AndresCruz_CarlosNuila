@@ -7,7 +7,6 @@ package lab3_andrescruz_carlosnuila;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Random;
 
 /**
  *
@@ -23,27 +22,6 @@ public class Lab3_AndresCruz_CarlosNuila {
         Scanner sc = new Scanner(System.in);
         int opcionMenu = 0;
         ArrayList <Ejercito> listaEjercito = new ArrayList();
-        listaEjercito.add(new Ejercito("Cyrodill","Tamriel",40000000));
-        Random r=new Random();
-        listaEjercito.add(new Ejercito("Skyrim","Tamriel",20000000));
-        String[]nombres={"Oscar","Joel","Carlos","Andres","Diego","Daniel","Cristopher","Ricardo","Eduardo","Manuel"};
-        String[]lugares={"Skyrim","Cyrodill","Valenwood","Elsweyr","Black Marsh","Morrowind"};
-        for (int i = 0; i < listaEjercito.size(); i++) {
-            for (int j = 0; j < 5; j++) {
-            int nom_alea=r.nextInt(10);
-            int lug_alea=r.nextInt(6);
-            listaEjercito.get(i).getListaSoldado().add(new Soldado(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
-                if (j==0) {
-                    listaEjercito.get(i).getListaSoldado().add(new General((1+r.nextInt(10)),nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
-                }else{
-                    if (j>=1&&j<=2) {
-                        listaEjercito.get(i).getListaSoldado().add(new Caballero(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
-                    }else{
-                    listaEjercito.get(i).getListaSoldado().add(new Ejecutor(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
-                    }
-                }
-        }
-        }
         ArrayList <Arma> listaArma = new ArrayList();
         while (opcionMenu != 5) {
             System.out.println("1)Crear Ejercitos\n"
@@ -82,10 +60,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                         } else {
                             System.out.println("El ejercito seleccionado no existe");
                         }
-                    }
-                    if(opcionEjercito == 4){
-                    opc4(listaEjercito);
-                    }
+                    }                    
                 }
             }
         }
@@ -95,119 +70,5 @@ public class Lab3_AndresCruz_CarlosNuila {
         for (int i = 0; i < 10; i++) {
             System.out.print("----");
         }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    public static void opc4(ArrayList<Ejercito>listaEjercito){
-        for (int i = 0; i < listaEjercito.size(); i++) {
-            System.out.println(listaEjercito.get(i));
-            espacio();
-            System.out.println("");
-        }
-        
     }
 }

@@ -70,7 +70,35 @@ public class Ejercito {
         return "Nombre del Ejercito=" + nombre + " Region=" + region + " Numero de Victorias=" + victorias + " Dinero total=" + dinero + " \nSoldados=\n" + listaSoldado;
     }
     
-    
+//        listaEjercito.add(new Ejercito("Cyrodill","Tamriel",40000000));
+//        Random r=new Random();
+//        listaEjercito.add(new Ejercito("Skyrim","Tamriel",20000000));
+//        String[]nombres={"Oscar","Joel","Carlos","Andres","Diego","Daniel","Cristopher","Ricardo","Eduardo","Manuel"};
+//        String[]lugares={"Skyrim","Cyrodill","Valenwood","Elsweyr","Black Marsh","Morrowind"};
+//        for (int i = 0; i < listaEjercito.size(); i++) {
+//            for (int j = 0; j < 5; j++) {
+//            int nom_alea=r.nextInt(10);
+//            int lug_alea=r.nextInt(6);
+//            listaEjercito.get(i).getListaSoldado().add(new Soldado(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
+//                if (j==0) {
+//                    listaEjercito.get(i).getListaSoldado().add(new General((1+r.nextInt(10)),nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
+//                }else{
+//                    if (j>=1&&j<=2) {
+//                        listaEjercito.get(i).getListaSoldado().add(new Caballero(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
+//                    }else{
+//                    listaEjercito.get(i).getListaSoldado().add(new Ejecutor(nombres[nom_alea],lugares[lug_alea],(20+r.nextInt(40)),100));
+//                    }
+//                }
+//        }
+//        }
+//    public static void opc4(ArrayList<Ejercito>listaEjercito){
+//        for (int i = 0; i < listaEjercito.size(); i++) {
+//            System.out.println(listaEjercito.get(i));
+//            espacio();
+//            System.out.println("");
+//        }
+//        
+//    }
     
     
     
