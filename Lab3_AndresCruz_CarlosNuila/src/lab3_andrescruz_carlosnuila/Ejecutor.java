@@ -9,6 +9,12 @@ package lab3_andrescruz_carlosnuila;
  *
  * @author Carlos Nuila
  */
-public class Ejecutor extends  {
+public class Ejecutor extends Soldado {
+
+    public Ejecutor(String nombre, String lugar, int edad, int salud) {
+        super(nombre, lugar, edad, salud);
+    }
+    
+    
     
 }

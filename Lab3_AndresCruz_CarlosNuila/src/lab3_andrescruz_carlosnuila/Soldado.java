@@ -58,15 +58,13 @@ public class Soldado {
         this.salud = salud;
     }
 
-    public Arma getArma() {
+    public ArrayList<Arma> getArma() {
         return arma;
     }
 
-    public void setArma(Arma arma) {
+    public void setArma(ArrayList<Arma> arma) {
         this.arma = arma;
     }
-    
-    
     
     
 }
