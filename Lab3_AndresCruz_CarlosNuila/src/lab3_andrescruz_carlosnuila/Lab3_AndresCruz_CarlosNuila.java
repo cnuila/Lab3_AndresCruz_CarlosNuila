@@ -7,7 +7,10 @@ package lab3_andrescruz_carlosnuila;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7b39023ec5d17814da582b1dd996cdbfa63d0ff9
 
 /**
  *
@@ -22,9 +25,14 @@ public class Lab3_AndresCruz_CarlosNuila {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         int opcionMenu = 0;
+<<<<<<< HEAD
 
         ArrayList<Ejercito> listaEjercito = new ArrayList();
         ArrayList<Arma> listaArma = new ArrayList();
+=======
+        ArrayList <Ejercito> listaEjercito = new ArrayList();
+        ArrayList <Arma> listaArma = new ArrayList();
+>>>>>>> 7b39023ec5d17814da582b1dd996cdbfa63d0ff9
         while (opcionMenu != 5) {
             System.out.println("1)Crear Ejercitos\n"
                     + "2)Crear Soldados\n"
@@ -85,6 +93,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                         } else {
                             System.out.println("El nodo seleccionado no existe");
                         }
+<<<<<<< HEAD
                     }
 
                     if (opcionEjercito == 3) {
@@ -177,6 +186,9 @@ public class Lab3_AndresCruz_CarlosNuila {
                             }
                         }
                     }
+=======
+                    }                    
+>>>>>>> 7b39023ec5d17814da582b1dd996cdbfa63d0ff9
                 }
             }
         }
@@ -187,5 +199,8 @@ public class Lab3_AndresCruz_CarlosNuila {
             System.out.print("----");
         }
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 7b39023ec5d17814da582b1dd996cdbfa63d0ff9
 }
