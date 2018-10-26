@@ -10,10 +10,17 @@ package lab3_andrescruz_carlosnuila;
  * @author MBanegas
  */
 public class Arma {
-    String nombre;
-    double alcance;
-    double precio;
+    protected String nombre;
+    protected double alcance;
+    protected double precio;
 
+    public Arma(String nombre, double alcance, double precio) {
+        this.nombre = nombre;
+        this.alcance = alcance;
+        this.precio = precio;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }
