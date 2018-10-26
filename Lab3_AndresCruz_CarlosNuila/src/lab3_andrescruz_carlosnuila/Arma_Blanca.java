@@ -9,6 +9,54 @@ package lab3_andrescruz_carlosnuila;
  *
  * @author MBanegas
  */
-public class Arma_Blanca {
+public class Arma_Blanca extends Arma{
+    String material;
+
+    public Arma_Blanca(String material, String nombre, double alcance, double precio) {
+        super(nombre, alcance, precio);
+        this.material = material;
+    }
     
+        public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public double getAlcance() {
+        return alcance;
+    }
+
+    @Override
+    public void setAlcance(double alcance) {
+        this.alcance = alcance;
+    }
+
+    @Override
+    public double getPrecio() {
+        return precio;
+    }
+
+    @Override
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+@Override
+    public String toString() {
+        return "Nombre del Arma=" + nombre + " Alcance del Arma=" + alcance + " Precio=" + precio+" Material="+material+"\n";
+    }    
+
 }
