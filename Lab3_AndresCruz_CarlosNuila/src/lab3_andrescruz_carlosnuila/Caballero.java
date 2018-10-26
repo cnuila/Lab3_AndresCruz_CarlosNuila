@@ -5,6 +5,8 @@
  */
 package lab3_andrescruz_carlosnuila;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Carlos Nuila
@@ -15,5 +17,53 @@ public class Caballero extends Soldado{
         super(nombre, lugar, edad, salud);
     }
     
-    
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String getLugar() {
+        return lugar;
+    }
+
+    @Override
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    @Override
+    public int getEdad() {
+        return edad;
+    }
+
+    @Override
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public int getSalud() {
+        return salud;
+    }
+
+    @Override
+    public void setSalud(int salud) {
+        this.salud = salud;
+    }
+
+    @Override
+    public ArrayList<Arma> getArma() {
+        return arma;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= Caballero" + "\nArmas en posesion=\n"+arma;
+    }
 }

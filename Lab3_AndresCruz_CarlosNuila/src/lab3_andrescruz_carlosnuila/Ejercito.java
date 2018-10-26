@@ -67,7 +67,7 @@ public class Ejercito {
     
     @Override
     public String toString() {
-        return "Ejercito{" + "nombre=" + nombre + ", region=" + region + ", victorias=" + victorias + ", dinero=" + dinero + ", listaSoldado=" + listaSoldado + '}';
+        return "Nombre del Ejercito=" + nombre + " Region=" + region + " Numero de Victorias=" + victorias + " Dinero total=" + dinero + " \nSoldados=\n" + listaSoldado;
     }
     
     

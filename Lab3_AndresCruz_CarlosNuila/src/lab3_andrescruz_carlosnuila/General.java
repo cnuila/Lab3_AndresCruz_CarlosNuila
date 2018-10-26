@@ -5,6 +5,8 @@
  */
 package lab3_andrescruz_carlosnuila;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Carlos Nuila
@@ -18,6 +20,49 @@ public class General extends Soldado {
         this.añoAlmando = añoAlmando;
     }
 
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String getLugar() {
+        return lugar;
+    }
+
+    @Override
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    @Override
+    public int getEdad() {
+        return edad;
+    }
+
+    @Override
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public int getSalud() {
+        return salud;
+    }
+
+    @Override
+    public void setSalud(int salud) {
+        this.salud = salud;
+    }
+
+    public ArrayList<Arma> getArma() {
+        return arma;
+    }    
     public int getAñoAlmando() {
         return añoAlmando;
     }
@@ -28,11 +73,6 @@ public class General extends Soldado {
 
     @Override
     public String toString() {
-        return "General{" + "anioAlmando=" + añoAlmando + '}';
-    }
-    
-    
-    
-    
-    
+        return "Nombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= General" + " Años al Mando=" + añoAlmando + "\nArmas en posesion=\n"+arma;
+    }    
 }
