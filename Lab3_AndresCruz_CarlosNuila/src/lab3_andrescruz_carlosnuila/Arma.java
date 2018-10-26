@@ -13,7 +13,7 @@ public class Arma {
     protected String nombre;
     protected double alcance;
     protected double precio;
-
+    protected String imprimir="";
     public Arma(String nombre, double alcance, double precio) {
         this.nombre = nombre;
         this.alcance = alcance;
@@ -47,7 +47,7 @@ public class Arma {
 
     @Override
     public String toString() {
-        return "Nombre del Arma=" + nombre + " Alcance del Arma=" + alcance + " Precio=" + precio+"\n";
+        return imprimir+"\n";
     }
     
 }

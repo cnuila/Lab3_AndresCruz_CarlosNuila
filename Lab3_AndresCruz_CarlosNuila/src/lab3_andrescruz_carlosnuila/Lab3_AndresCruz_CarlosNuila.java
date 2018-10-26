@@ -8,6 +8,7 @@ package lab3_andrescruz_carlosnuila;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Carlos Nuila
@@ -21,6 +22,7 @@ public class Lab3_AndresCruz_CarlosNuila {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         int opcionMenu = 0;
+
         ArrayList<Ejercito> listaEjercito = new ArrayList();
         ArrayList<Arma> listaArma = new ArrayList();
         while (opcionMenu != 5) {
@@ -158,7 +160,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                                 }
                                 if (tipoSoldado == 3){
                                     if (contEjecutor == 0){
-                                        listaEjercito.get(posicionEjercito).getListaSoldado().add(new Ejecutor(nombre, lugar, edad, salud, lugar));
+                                        listaEjercito.get(posicionEjercito).getListaSoldado().add(new Ejecutor(nombre, lugar, edad, salud));
                                     }
                                 }
                             } else {
@@ -175,8 +177,6 @@ public class Lab3_AndresCruz_CarlosNuila {
                             }
                         }
                     }
-                } else {
-                    System.out.println("El nodo seleccionado no existe");
                 }
             }
         }
@@ -187,4 +187,5 @@ public class Lab3_AndresCruz_CarlosNuila {
             System.out.print("----");
         }
     }
+    
 }

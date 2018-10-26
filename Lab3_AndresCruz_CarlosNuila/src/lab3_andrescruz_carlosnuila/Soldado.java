@@ -12,12 +12,13 @@ import java.util.ArrayList;
  * @author Carlos Nuila
  */
 public class Soldado {
-    
+    protected String imprimir="";
     protected String nombre;
     protected String lugar;
     protected int edad;
     protected int salud;
     protected ArrayList<Arma> arma = new ArrayList();
+    protected String rango;
 
     public Soldado(String nombre, String lugar, int edad, int salud) {
         this.nombre = nombre;
@@ -65,6 +66,9 @@ public class Soldado {
     public void setArma(ArrayList<Arma> arma) {
         this.arma = arma;
     }
-    
+    @Override
+    public String toString() {
+        return imprimir;
+    }
     
 }

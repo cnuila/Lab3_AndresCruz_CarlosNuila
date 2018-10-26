@@ -14,6 +14,7 @@ public class Bomba extends Arma{
 
     public Bomba(String material, String nombre, double alcance, double precio) {
         super(nombre, alcance, precio);
+        super.imprimir+="Nombre del Arma=" + nombre + " Alcance del Arma=" + alcance + " Precio=" + precio+" Material="+material+"\n";
         this.material = material;
     }
 
@@ -55,9 +56,5 @@ public class Bomba extends Arma{
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-@Override
-    public String toString() {
-        return "Nombre del Arma=" + nombre + " Alcance del Arma=" + alcance + " Precio=" + precio+" Material="+material+"\n";
-    }    
-        
+
 }

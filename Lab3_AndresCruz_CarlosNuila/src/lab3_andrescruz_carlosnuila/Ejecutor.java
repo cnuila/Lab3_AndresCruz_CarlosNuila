@@ -13,8 +13,10 @@ import java.util.ArrayList;
  */
 public class Ejecutor extends Soldado {
 
-    public Ejecutor(String nombre, String lugar, int edad, int salud,String material) {
+    public Ejecutor(String nombre, String lugar, int edad, int salud) {
         super(nombre, lugar, edad, salud);
+        super.rango="Ejecutor";
+        super.imprimir+="\nNombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= Ejecutor" + "\nArmas en posesion=\n"+arma;
     }
 
     @Override
@@ -62,9 +64,6 @@ public class Ejecutor extends Soldado {
         return arma;
     }
 
-    @Override
-    public String toString() {
-        return "Nombre="+nombre+" Nacionalidad="+lugar+" Edad="+edad+" Salud="+salud+" Rango= Ejecutor" + "\nArmas en posesion=\n"+arma;
-    }
+    
     
 }
