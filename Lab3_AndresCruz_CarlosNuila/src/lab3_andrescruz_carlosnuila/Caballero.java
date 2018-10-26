@@ -9,14 +9,11 @@ package lab3_andrescruz_carlosnuila;
  *
  * @author Carlos Nuila
  */
-public class Lab3_AndresCruz_CarlosNuila {
+public class Caballero extends Soldado{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-       
+    public Caballero(String nombre, String lugar, int edad, int salud) {
+        super(nombre, lugar, edad, salud);
     }
+    
     
 }
