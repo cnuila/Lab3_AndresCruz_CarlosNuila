@@ -18,5 +18,9 @@ public class Lab3_AndresCruz_CarlosNuila {
         // TODO code application logic here
        
     }
-    
+    public static void espacio(){
+        for (int i = 0; i < 10; i++) {
+            System.out.print("----");
+        }
+    }
 }
