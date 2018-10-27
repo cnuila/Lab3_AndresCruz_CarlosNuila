@@ -286,6 +286,29 @@ public class Lab3_AndresCruz_CarlosNuila {
                         }
                         if (tipoArma == 1) {
                             System.out.print("Ingrese el material de la bomba: ");
+                            String material = sc.next();
+                            listaArma.add(new Bomba(material, nombre, alcance, precio));
+                        }
+                        if (tipoArma == 2) {
+                            System.out.println("1)Automatico\n"
+                                    + "2)No automatico");
+                            int opcionTiporifle = sc.nextInt();
+                            while (opcionTiporifle > 2) {
+                                System.out.println("1)Automatico\n"
+                                        + "2)No automatico");
+                                opcionTiporifle = sc.nextInt();
+                            }
+                            boolean tipoRifle = true;
+                            if (opcionTiporifle == 1) {
+                                tipoRifle = true;
+                            } else {
+                                tipoRifle = false;
+                            }
+                            listaArma.add(new Rifle(tipoRifle, nombre, alcance, precio));
+                        }
+                        if (tipoArma == 3){
+                            System.out.print("Ingrese el material: ");
+                            String material = sc.next();
                             
                         }
                     }
