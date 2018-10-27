@@ -445,6 +445,7 @@ public class Lab3_AndresCruz_CarlosNuila {
         int cont = 0;
         while (flag == true) {
             if (cont % 2 == 0) {
+                imprimir(Tablero_Jugador1);
                 System.out.println("Jugador 1 ingrese la posicion de la pieza que desea mover. ");
                 System.out.println("Ingrese la fila: ");
                 int fila = sc.nextInt();
@@ -521,7 +522,9 @@ public class Lab3_AndresCruz_CarlosNuila {
                         }
                     }
                 }
+                imprimir(Tablero_Jugador1);
             } else {
+                imprimir(Tablero_Jugador2);
                 System.out.println("Jugador 2 ingrese la posicion de la pieza que desea mover. ");
                 System.out.println("Ingrese la fila: ");
                 int fila = sc.nextInt();
@@ -598,6 +601,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                         }
                     }
                 }
+                imprimir(Tablero_Jugador2);
             }
         }
     }
