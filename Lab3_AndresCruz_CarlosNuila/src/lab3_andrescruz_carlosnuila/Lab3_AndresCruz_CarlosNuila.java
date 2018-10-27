@@ -197,6 +197,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                                         + "4)Salud\n"
                                         + "5)Anios al mando\n"
                                         + "6)Atras");
+                                System.out.print("Ingrese su opcion: ");
                                 int opcionModificar = sc.nextInt();
                                 if (opcionModificar == 1) {
                                     System.out.print("Ingrese el nombre del Soldado: ");
@@ -323,7 +324,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                                     + "4)Material\n"
                                     + "5)Estado Automatico\n"
                                     + "6)Atras");
-                            
+                            System.out.print("");
                         }else{
                             System.out.println("No existe el nodo ingresado");
                         }
