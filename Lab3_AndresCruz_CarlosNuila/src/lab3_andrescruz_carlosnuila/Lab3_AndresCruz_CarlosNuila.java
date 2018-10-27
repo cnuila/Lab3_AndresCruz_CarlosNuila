@@ -309,7 +309,23 @@ public class Lab3_AndresCruz_CarlosNuila {
                         if (tipoArma == 3){
                             System.out.print("Ingrese el material: ");
                             String material = sc.next();
+                            listaArma.add(new Arma_Blanca(material, nombre, alcance, precio));
+                        }
+                    }
+                    
+                    if (opcionArmas == 2){
+                        System.out.print("Ingrese la posicion del arma: ");
+                        int posicionArma = sc.nextInt();
+                        if (posicionArma < listaArma.size()){
+                            System.out.println("1)Nombre\n"
+                                    + "2)Alcance\n"
+                                    + "3)Precio\n"
+                                    + "4)Material\n"
+                                    + "5)Estado Automatico\n"
+                                    + "6)Atras");
                             
+                        }else{
+                            System.out.println("No existe el nodo ingresado");
                         }
                     }
                 }
