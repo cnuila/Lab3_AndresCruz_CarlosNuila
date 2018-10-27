@@ -349,4 +349,183 @@ public class Lab3_AndresCruz_CarlosNuila {
         }
 
     }
+    public static void Juego(Ejercito ejercito,Ejercito ejercito2){
+        Random r=new Random();
+        Scanner sc=new Scanner(System.in);
+    Object[][]Tablero=new Object[10][10];
+    Object[][]Tablero_Jugador1=new Object[10][10];
+    Object[][]Tablero_Jugador2=new Object[10][10];    
+        for (int i = 0; i < Tablero.length; i++) {
+            for (int j = 0; j < Tablero.length; j++) {
+                Tablero[i][j]=" ";
+                Tablero_Jugador1[i][j]=" ";
+                Tablero_Jugador2[i][j]=" ";
+            }
+        }
+        for (int i = 0; i < 20; i++) {
+            int num1=1+r.nextInt(10),num2=1+r.nextInt(10);
+            if (Tablero[num1-1][num2-1] instanceof Piedra) {
+                i--;
+            }else{
+            Tablero[num1-1][num2-1]=new Piedra();
+            Tablero_Jugador1[num1-1][num2-1]=new Piedra();
+            Tablero_Jugador2[num1-1][num2-1]=new Piedra();
+            }
+        }
+        System.out.println("Jugador 1, debe ingresar las coordenadas para posicionar sus tropas. ");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Posicione al soldado "+(i+1));
+            System.out.println("Ingrese la fila: ");
+            int fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            int columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            }
+            if (Tablero_Jugador1[fila][columna] instanceof Piedra) {
+                i--;
+            }else{
+            Tablero_Jugador1[fila][columna]="#";
+            Tablero[fila][columna]="#";
+            }
+        }
+        System.out.println("Jugador 2, debe ingresar las coordenadas para posicionar sus tropas. ");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Posicione al soldado "+(i+1));
+            System.out.println("Ingrese la fila: ");
+            int fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            int columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            }
+            if (Tablero[fila][columna] instanceof Piedra||Tablero[fila][columna].equals("#")) {
+                i--;
+            }else{
+            Tablero_Jugador2[fila][columna]="*";
+            Tablero[fila][columna]="*";
+            }
+        }
+        boolean flag=true;
+        int cont=0;
+        while(flag==true){
+            if (cont%2==0) {
+                System.out.println("Jugador 1 ingrese la posicion de la pieza que desea mover. ");
+                System.out.println("Ingrese la fila: ");
+            int fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            int columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            }
+                if (Tablero[fila][columna].equals("#")) {
+                    Tablero[fila][columna]=" ";
+                    Tablero_Jugador1[fila][columna]=" ";
+                    System.out.println("Ingrese a que espacio desea moverse ");
+                    System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+                }
+                    if (Tablero[fila][columna].equals("#")) {
+                        System.out.println("La posicion esta ocupada por un compañero... Perdio su turno.");
+                        cont++;
+                    }else{
+                        if (Tablero[fila][columna].equals("*")) {
+                            System.out.println("La posicion esta ocupada por un enemigo.... Perdio su turno.");
+                            cont++;
+                        }else{
+                            if (Tablero[fila][columna] instanceof Piedra) {
+                                System.out.println("La posicion esta ocupada por una piedra.... Perdio su turno.");
+                                cont++;
+                            }else{
+                            Tablero[fila][columna]="#";
+                    Tablero_Jugador1[fila][columna]="#";
+                    cont++;
+                            }
+                        }                        
+                    }
+                }
+            }else{
+            System.out.println("Jugador 2 ingrese la posicion de la pieza que desea mover. ");
+                System.out.println("Ingrese la fila: ");
+            int fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            int columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            }
+                if (Tablero[fila][columna].equals("*")) {
+                    Tablero[fila][columna]=" ";
+                    Tablero_Jugador1[fila][columna]=" ";
+                    System.out.println("Ingrese a que espacio desea moverse ");
+                    System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            while(fila<0||fila>=10){
+            System.out.println("Ingrese la fila: ");
+            fila=sc.nextInt();
+            }
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+            while(columna<0||columna>=10){
+            System.out.println("Ingrese la columna: ");
+            columna=sc.nextInt();
+                }
+                    if (Tablero[fila][columna].equals("*")) {
+                        System.out.println("La posicion esta ocupada por un compañero... Perdio su turno.");
+                        cont++;
+                    }else{
+                        if (Tablero[fila][columna].equals("#")) {
+                            System.out.println("La posicion esta ocupada por un enemigo.... Perdio su turno.");
+                            cont++;
+                        }else{
+                            if (Tablero[fila][columna] instanceof Piedra) {
+                                System.out.println("La posicion esta ocupada por una piedra.... Perdio su turno.");
+                                cont++;
+                            }else{
+                            Tablero[fila][columna]="*";
+                    Tablero_Jugador1[fila][columna]="*";
+                    cont++;
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+    public static void imprimir(Object[][]temp){
+        for (int i = 0; i < temp.length; i++) {
+            for (int j = 0; j < temp.length; j++) {
+                System.out.print("["+temp[i][j]+"]");
+            }
+            System.out.println("");
+        }
+    }
 }
