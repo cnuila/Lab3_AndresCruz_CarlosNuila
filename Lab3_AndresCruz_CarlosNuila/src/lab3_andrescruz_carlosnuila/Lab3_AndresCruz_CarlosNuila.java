@@ -492,6 +492,34 @@ public class Lab3_AndresCruz_CarlosNuila {
                             }
                         }
                     }
+                    System.out.println("Ingrese las coordenadas del objetivo que desea atacar: ");
+                    System.out.println("Ingrese la fila: ");
+                    fila = sc.nextInt();
+                    while (fila < 0 || fila >= 10) {
+                        System.out.println("Ingrese la fila: ");
+                        fila = sc.nextInt();
+                    }
+                    System.out.println("Ingrese la columna: ");
+                    columna = sc.nextInt();
+                    while (columna < 0 || columna >= 10) {
+                        System.out.println("Ingrese la columna: ");
+                        columna = sc.nextInt();
+                    }
+                    if (Tablero[fila][columna].equals("*")) {
+                        System.out.println("Has matado exitosamente a tu enemigo! ");
+                        Tablero_Jugador2[fila][columna] = "X";
+                        Tablero_Jugador1[fila][columna] = "X";
+                        Tablero[fila][columna] = "X";
+                    } else {
+                        if (Tablero[fila][columna].equals("#")) {
+                            System.out.println("Has matado exitosamente a tu amigo! ");
+                            Tablero_Jugador2[fila][columna] = "X";
+                            Tablero_Jugador1[fila][columna] = "X";
+                            Tablero[fila][columna] = "X";
+                        } else {
+                            System.out.println("Has fallado tu tiro! ");
+                        }
+                    }
                 }
             } else {
                 System.out.println("Jugador 2 ingrese la posicion de la pieza que desea mover. ");
@@ -509,7 +537,7 @@ public class Lab3_AndresCruz_CarlosNuila {
                 }
                 if (Tablero[fila][columna].equals("*")) {
                     Tablero[fila][columna] = " ";
-                    Tablero_Jugador1[fila][columna] = " ";
+                    Tablero_Jugador2[fila][columna] = " ";
                     System.out.println("Ingrese a que espacio desea moverse ");
                     System.out.println("Ingrese la fila: ");
                     fila = sc.nextInt();
@@ -536,9 +564,37 @@ public class Lab3_AndresCruz_CarlosNuila {
                                 cont++;
                             } else {
                                 Tablero[fila][columna] = "*";
-                                Tablero_Jugador1[fila][columna] = "*";
+                                Tablero_Jugador2[fila][columna] = "*";
                                 cont++;
                             }
+                        }
+                    }
+                    System.out.println("Ingrese las coordenadas del objetivo que desea atacar: ");
+                    System.out.println("Ingrese la fila: ");
+                    fila = sc.nextInt();
+                    while (fila < 0 || fila >= 10) {
+                        System.out.println("Ingrese la fila: ");
+                        fila = sc.nextInt();
+                    }
+                    System.out.println("Ingrese la columna: ");
+                    columna = sc.nextInt();
+                    while (columna < 0 || columna >= 10) {
+                        System.out.println("Ingrese la columna: ");
+                        columna = sc.nextInt();
+                    }
+                    if (Tablero[fila][columna].equals("*")) {
+                        System.out.println("Has matado exitosamente a tu enemigo! ");
+                        Tablero_Jugador2[fila][columna] = "X";
+                        Tablero_Jugador1[fila][columna] = "X";
+                        Tablero[fila][columna] = "X";
+                    } else {
+                        if (Tablero[fila][columna].equals("#")) {
+                            System.out.println("Has matado exitosamente a tu amigo! ");
+                            Tablero_Jugador2[fila][columna] = "X";
+                            Tablero_Jugador1[fila][columna] = "X";
+                            Tablero[fila][columna] = "X";
+                        } else {
+                            System.out.println("Has fallado tu tiro! ");
                         }
                     }
                 }
